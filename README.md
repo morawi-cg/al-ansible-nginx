@@ -1,9 +1,9 @@
-<a href="ttps://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/main_structure.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a>
+<a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/main_structure.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a>
 
-***INSERT GRAPHIC HERE (include hyperlink in image)***
+***Below is the General diagram explaining the operation and components***
 
 # Vagrant#Ansible#NginxL#Webserver#Loadbalancer
-
+<a href=https://github.com/morawi-cg/al-ansible-nginx.git" ><img src="https://github.com/morawi-cg/al-ansible-nginx/readme_images/VagrantAnsibleNginx01.jpeg">
 > How to automate the creation of an Nginx load balanced pair of Nginx web servers  
 
 > Deployable on a Linux host 
