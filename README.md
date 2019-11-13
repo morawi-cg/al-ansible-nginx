@@ -20,12 +20,12 @@
 
 - For more on these wonderful ~~badgers~~ badges, refer to <a href="https://github.com/morawi-cg/al-ansible-nginx" target="_blank">`VagrantAnsibleNginxLB`</a>.
 
-***INSERT ANOTHER GRAPHIC ***
+*** ***
 
-[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
 
 - Most people will glance at your `README`, *maybe* star it, and leave
-- Ergo, people should understand instantly what your project is about based on your repo
+- It is constructed so that, people should understand instantly what this project is about based on this repo, the images and the description. Please leave a comment or a suggestion for future improvements.
+
 
 > Tips
 
