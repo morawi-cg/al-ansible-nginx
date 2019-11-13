@@ -19,16 +19,34 @@
    state: latest
    update_cache: yes
    become: yes
+   notify:
+      - start nginx
+
 - name: start nginx
   service:
     name: nginx
     state: started
     become: yes
+- name: Creates directory this project site config directory al.local directory
+  file:
+    path: /etc/nginx/sites-available/al.local 
+    state: directory
+    owner: nginx
+    group: nginx
+    mode: u=rw,g=r,o=r
+
+- name: Creates directory this project site web_www directory al.local directory
+  file:
+    path: /var/www/al.local 
+    state: directory
+    owner: nginx
+    group: nginx
+    mode: u=rw,g=r,o=r
 
 - name: Copy Nginx config file 
   template:
-    src: template/nginx.conf
-    dest: /etc/nginx/conf.d/nginx.conf
+    src: template/al.local.conf
+    dest: /etc/nginx/sites-available/al.local/al.local.conf
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r
@@ -45,7 +63,7 @@
 - name: Copy holding page for Nginx Specific
   template:
     src: template/webserver01.al.local.html
-    dest: /etc/nginx/sites-available/al.local/index.html
+    dest: /var/www/al.local/index.html
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r 
