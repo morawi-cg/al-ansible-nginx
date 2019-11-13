@@ -2,7 +2,7 @@
 
 ***Below is the General diagram explaining the operation and components***
 
-<a href="https://github.com/morawi-cg/al-ansible-nginx.git" ><img src="readme_images/VagrantAnsibleNginx01.jpeg?3&s=200"> title="The_dynamic_Flow_of_automation_processes " alt="Main_Structure_LB_Webservers"></a>
+<a href="https://github.com/morawi-cg/al-ansible-nginx.git" ><img src="readme_images/VagrantAnsibleNginx01.jpeg?v=3&s=200"> title="The_dynamic_Flow_of_automation_processes " alt="Main_Structure_LB_Webservers"></a>
 > How to automate the creation of an Nginx load balanced pair of Nginx web servers  
 
 > Deployable on a Linux host 
