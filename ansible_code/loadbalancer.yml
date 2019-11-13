@@ -28,7 +28,7 @@
 
 - name: Copy Nginx config file 
   template:
-    src: template/lb_nginx.conf
+    src: templates/lb_nginx.conf
     dest: /etc/nginx/conf.d/lb_nginx.conf
     owner: nginx
     group: nginx

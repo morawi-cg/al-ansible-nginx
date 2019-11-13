@@ -1,6 +1,6 @@
 ---
----
-# 1st webserver
+
+#2nd webserver
 - hostname:
     name: webserver02.al.local
     ansible_ssh_host: 10.0.0.15
@@ -46,7 +46,7 @@
 
 - name: Copy Nginx config file 
   template:
-    src: template/al.local.conf
+    src: templates/al.local.conf
     dest: /etc/nginx/sites-available/al.local/al.local.conf
     owner: nginx
     group: nginx
@@ -63,7 +63,7 @@
 
 - name: Copy holding page for Nginx Specific
   template:
-    src: template/webserver02.al.local.html
+    src: templates/webserver02.al.local.html
     dest: /var/www/al.local/index.html
     owner: nginx
     group: nginx
