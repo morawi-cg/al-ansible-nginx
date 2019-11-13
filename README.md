@@ -3,7 +3,7 @@
 ***Below is the General diagram explaining the operation and components***
 
 # Vagrant#Ansible#NginxL#Webserver#Loadbalancer
-<a href=https://github.com/morawi-cg/al-ansible-nginx.git" ><img src="https://github.com/morawi-cg/al-ansible-nginx/readme_images/VagrantAnsibleNginx01.jpeg">
+<a href=https://github.com/morawi-cg/al-ansible-nginx.git" ><img src="https://github.com/morawi-cg/al-ansible-nginx/readme_images/VagrantAnsibleNginx01.jpeg?3&s=200">
 > How to automate the creation of an Nginx load balanced pair of Nginx web servers  
 
 > Deployable on a Linux host 
