@@ -3,7 +3,7 @@
 # 1st Loadbalancer
 - hostname:
     name: loadbalance01.al.local
-    ansible_ssh_host: 10.0.0.13
+    ansible_ssh_host: 10.0.0.13 my_host_alias=loadbalance01.al.local 
     ansible_ssh_port: 22
     ansible_ssh_user: vagrant
     ansible_ssh_pass: vagrant
