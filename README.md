@@ -23,7 +23,7 @@
 *** ***
 
 
-- Most people will glance at your `README`, *maybe* star it, and leave
+- Most people will glance at the `README`, *maybe* star it, and leave
 - It is constructed so that, people should understand instantly what this project is about based on this repo, the images and the description. Please leave a comment or a suggestion for future improvements.
 
 
