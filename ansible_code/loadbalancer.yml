@@ -1,0 +1,44 @@
+---
+
+# 1st Loadbalancer
+- hostname:
+    name: loadbalance01.al.local
+    ansible_ssh_host: 10.0.0.13
+    ansible_ssh_port: 22
+    ansible_ssh_user: vagrant
+    
+- hosts: all
+
+- vars:
+    http_port: 80
+
+- tasks:
+
+- name: ensure nginx is installed 
+  apt: 
+   name: nginx 
+   state: latest
+   update_cache: yes
+   become: yes
+- name: start nginx
+  service:
+    name: nginx
+    state: started
+    become: yes
+
+- name: Copy Nginx config file 
+  template:
+    src: template/nginx.conf
+    dest: /etc/nginx/conf.d/lb_nginx.conf
+    owner: nginx
+    group: nginx
+    mode: u=rw,g=r,o=r
+
+- name: Ansible check file exists example.
+  stat:
+    path: /etc/nginx/conf.d/lb_nginx.conf
+    register: file_details
+
+- debug:
+    msg: "The Nginx config file or directory exists"
+    when: file_details.stat.exists

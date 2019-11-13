@@ -1,0 +1,3 @@
+10.0.0.13 loadbalancer01.al.local al_web_servers al.local
+10.0.0.14 webserver01.al.local
+10.0.0.15 webserver02.al.local
