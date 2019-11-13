@@ -36,9 +36,17 @@
 
 - name: Ansible check file exists example.
   stat:
-    path: /etc/nginx/conf.d/lb_nginx.conf
+    path: /etc/nginx/conf.d/nginx.conf
     register: file_details
 
 - debug:
     msg: "The Nginx config file or directory exists"
     when: file_details.stat.exists
+    
+- name: Copy holding page for Nginx Specific
+  template:
+    src: template/webserver02.al.local.html
+    dest: /etc/nginx/sites-available/al.local/index.html
+    owner: nginx
+    group: nginx
+    mode: u=rw,g=r,o=r
