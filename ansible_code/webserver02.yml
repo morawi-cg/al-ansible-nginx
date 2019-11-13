@@ -6,6 +6,7 @@
     ansible_ssh_host: 10.0.0.15
     ansible_ssh_port: 22
     ansible_ssh_user: vagrant
+    ansible_ssh_pass: vagrant
     
 - hosts: all
 
@@ -51,6 +52,9 @@
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r
+
+- name: Create symlink
+  file: /etc/nginx/sites-available/al.local dest=/etc/nginx/sites-enabled/al.local state=link
 
 - name: Ansible check file exists example.
   stat:
