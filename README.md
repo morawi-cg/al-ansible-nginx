@@ -37,7 +37,7 @@
 
 
 
-## Table of Contents (Optional)
+## Table of Contents:
 
 > The `README` has a lot of info, thus section headers might be nice to focuse on what the reader needs in specific.
 
