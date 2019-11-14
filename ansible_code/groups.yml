@@ -1,8 +1,9 @@
 ---
 
 [webservers]
-webserver01.al.local
+webserver01.al.local 
 webserver02.al.local
+
 
 [loadbalancers]
 loadbalancer01.al.local
