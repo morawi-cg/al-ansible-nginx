@@ -28,9 +28,9 @@
 
 > Tips
 
-- HAVE WHITE SPACE
-- MAKE IT PRETTY
-- GIFS ARE REALLY COOL
+- Use Python virtual env, helps mitigate the delay of making big errors
+- Use test inventory use the 'i' key to help 'ansible -i /etc/ansible/al-project webservers -m ping'
+- Diagrams and images, a picture is a thousand word! (Many languages in one!)
 
 > GIF Tools
 
