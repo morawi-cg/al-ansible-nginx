@@ -23,7 +23,7 @@
    become: yes
    notify:
       - start nginx
-
+        
 - name: start nginx
   service:
     name: nginx
@@ -36,7 +36,7 @@
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r
-
+    become: yes
 - name: Creates directory this project site web_www directory al.local directory
   file:
     path: /var/www/al.local 
@@ -44,7 +44,7 @@
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r
-
+    become: yes
 - name: Copy Nginx config file 
   template:
     src: templates/al.local.conf
@@ -52,19 +52,19 @@
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r
-
+    become: yes
 - name: Create symlink
   file: /etc/nginx/sites-available/al.local dest=/etc/nginx/sites-enabled/al.local state=link
-
+  become: yes
 - name: Ansible check file exists example.
   stat:
     path: /etc/nginx/conf.d/nginx.conf
     register: file_details
-
+    become: yes  
 - debug:
     msg: "The Nginx config file or directory exists"
     when: file_details.stat.exists
-
+    become: yes
 - name: Copy holding page for Nginx Specific
   template:
     src: templates/webserver02.al.local.html
@@ -72,5 +72,5 @@
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r 
-
+    become: yes
     

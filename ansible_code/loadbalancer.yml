@@ -34,12 +34,13 @@
     owner: nginx
     group: nginx
     mode: u=rw,g=r,o=r
-
+    become: yes
 - name: Ansible check file exists example.
   stat:
     path: /etc/nginx/conf.d/lb_nginx.conf
     register: file_details
-
+    become: yes
 - debug:
     msg: "The Nginx config file or directory exists"
     when: file_details.stat.exists
+    become: yes
