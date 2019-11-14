@@ -49,7 +49,7 @@
 
 ---
 
-## Example  remote ssh setup for vs code(Optional):
+## Example  remote ssh setup for vs code:
    <p> some people may wish to use vscode, now almost a defacto code editor, it has a rather unique feature, </p>
    <p> this is rather neat for a free editor. Below is an example of setting it up to edit on remote host.</p>
 
