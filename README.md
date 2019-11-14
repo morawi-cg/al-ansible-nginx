@@ -11,9 +11,9 @@
 
 **Key points**
 
-- compatibility
+- Compatibility , (Python versions and deprecated Ansible syntax)
 - Different ways to install automation tools depending on the deployment targets 
-- Dependencies
+- Know your Ansible! "ansible-playbook playbooks/PLAYBOOK_NAME.yml --flush-cache" known issue
 - Advantages: virtual env offer flexibility: 'venv ,virtualenv' package for Python on Unix & Windows
 
 
