@@ -86,9 +86,8 @@
 
 ### Setup
 
-- If you want more syntax highlighting, format your code like this:
-
-> update and install this package first
+- Check that virtual box is installed, operational and tested manually via starting a vm:
+- Install vagrant and ansible, refer to the help below
 
 ```shell
 $ brew update
@@ -126,12 +125,13 @@ $ yum -y install rh-python36-numpy  rh-python36-scipy rh-python36-python-tools r
 ```
 - For all the possible languages that support syntax highlithing on GitHub (which is basically all of them), refer <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank">here</a>.
 
+
 ---
 
 ## Features
-## Usage (Optional)
-## Documentation (Optional)
-## Tests (Optional)
+## Usage
+## Documentation
+## Tests
 
 - Going into more detail on code and technologies used
 
@@ -169,6 +169,7 @@ If you wish to manipulate the code please post to your own repo and change there
 
 ## Support
 
+> ignore error "dpkg-preconfigure: unable to re-open stdin: No such file or directory" it was highlighted in vagrant groups. 
 Reach out to me at one of the following places!
 
 - github at <a href="https://github.com/morawi-cg/al-ansible-nginx.git" target="_blank">`https://github.com/morawi-cg/al-ansible-nginx.git`</a>
