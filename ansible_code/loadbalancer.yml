@@ -7,8 +7,8 @@
     ansible_ssh_port: 22
     ansible_ssh_user: vagrant
     ansible_ssh_pass: vagrant
-    
-- hosts: all
+
+#- hosts: all
 
 - vars:
     http_port: 80
