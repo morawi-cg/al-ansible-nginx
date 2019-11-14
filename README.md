@@ -9,7 +9,7 @@
 
 > include terms/tags that can be searched
 
-**Key points will go here**
+**Key points**
 
 - compatibility
 - issues
