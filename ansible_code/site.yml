@@ -1,5 +1,6 @@
 # This playbook deploys the whole application stack in this site.
 
+
 - name: apply nginx configuration to two webserver nodes
   hosts: webservers
   remote_user: vagrant
