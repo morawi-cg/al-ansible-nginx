@@ -12,9 +12,9 @@
 **Key points**
 
 - compatibility
-- issues
-- devDependencies
-- pip package for Python on Unix & Windows
+- Different ways to install automation tools depending on the deployment targets 
+- Dependencies
+- Advantages: virtual env offer flexibility: 'venv ,virtualenv' package for Python on Unix & Windows
 
 
 - For more on these wonderful ~~badgers~~ badges, refer to <a href="https://github.com/morawi-cg/al-ansible-nginx" target="_blank">`VagrantAnsibleNginxLB`</a>.
