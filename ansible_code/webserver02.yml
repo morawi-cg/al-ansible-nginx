@@ -2,7 +2,7 @@
 
 #2nd webserver
 
-- hosts: al-webserver02.local
+- hosts: webserver02.al.local
 
 - vars:
     http_port: 80
