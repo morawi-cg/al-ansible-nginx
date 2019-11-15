@@ -1,14 +1,8 @@
 ---
 
 #2nd webserver
-- hostname:
-    name: webserver02.al.local
-    ansible_ssh_host: 10.0.0.15 my_host_alias=webserver01.al.local
-    ansible_ssh_port: 22
-    ansible_ssh_user: vagrant
-    ansible_ssh_pass: vagrant
-    
-#- hosts: all
+
+- hosts: al-webserver02.local
 
 - vars:
     http_port: 80
