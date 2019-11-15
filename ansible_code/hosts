@@ -1,12 +1,6 @@
----
-
 [webservers]
-webserver01.al.local 
-webserver02.al.local
-
+webserver01.al.local ansible_host=10.0.0.14 ansible_connection=local ansible_user=vagrant ansible_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+webserver02.al.local ansible_host=10.0.0.15  ansible_connection=local ansible_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
 
 [loadbalancers]
-loadbalancer01.al.local
-
-#[dbservers]
-#dbserver01.al.local
+loadbalancer01.al.local ansible_host=10.0.0.13 ansible_connection=local ansible_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
