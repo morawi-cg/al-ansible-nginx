@@ -143,6 +143,19 @@ Activate the vagrant file, change directory to the repository, the file is calle
 The vagrant part is not related or connected to Ansible components, ansible simply has roles, each role is assigned to a virtual machine, the idea its simpler to have roles independent per machine, this was a change will not need to be too impacting.
 
 ansible-galaxy is used to create the 'Roles' it will create an empty structure of folders, these need to be filled, depending on how one wants to built the roles. The site.yml will be the central point to call the needed Roles. 
+
+An example of the usage of the 'ansible-galaxy' is the code below. This was of automating the creation of a structure that represent an object has also been replicated on other automation tools such as Pupet. 
+
+```
+[root@localhost ansible]# ansible-galaxy init al-webcluster
+- al-webcluster was created successfully
+[root@localhost al-webcluster]# ansible-galaxy init al-loadbalancer
+- al-loadbalancer was created successfully
+[root@localhost al-webcluster]# ansible-galaxy init al-webserver01
+- al-webserver01 was created successfully
+[root@localhost al-webcluster]# ansible-galaxy init al-webserver02
+- al-webserver02 was created successfully
+```
 ## Documentation
 There are excellent documentation on individual technologies involved. Leave me a note if more is needed.
 ## Tests
