@@ -82,7 +82,6 @@
   required will include Vagrant,Virtual Box, Ansible, Ansible dependencies in the form of Python libraries.
   some Ansible functionality may not be fully workable on windows yet! Need to be checked.
 ### Vagrant File
-
 - Vagrant file should include the syntax required to pull machine images `https://app.vagrantup.com/ubuntu/boxes/bionic64`
 
 ### Setup
@@ -130,7 +129,20 @@ $ yum -y install rh-python36-numpy  rh-python36-scipy rh-python36-python-tools r
 ---
 
 ## Features
+Ansible is key, one must understand how it works, it is comprised of objects caller Roles, they are comprised of smaller objects called tasks, they are comprised of modules, those are likely to be Python modules that interact with the operating system the automation tool will by operating upon.
+
+<a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/Ansible-Objects-Relations.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a>
+
+Nginx is a very powerful webserver, aims at performance, its very sophisticated. Has multiple other uses, most popular is the an Application loadbalance, reverse proxy and an application server for programming languages such as Python, this is done through additioinal modules.
+
+<a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/Load_balance_Options.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a>
+
 ## Usage
+Activate the vagrant file, change directory to the repository, the file is called Vagrantfile, as long as your Computer's operating system can run Python, Ansible, VirtualBox and Vagrant), then you should be able to just run 'vagrant up'. This will generate the virtual machines. These type of machines are specially adapted to Vagrant. Packer can be used to transform them to images that can be used on cloud providers, this is why one can use this process as testing grounds. 
+
+The vagrant part is not related or connected to Ansible components, ansible simply has roles, each role is assigned to a virtual machine, the idea its simpler to have roles independent per machine, this was a change will not need to be too impacting.
+
+ansible-galaxy is used to create the 'Roles' it will create an empty structure of folders, these need to be filled, depending on how one wants to built the roles. The site.yml will be the central point to call the needed Roles. 
 ## Documentation
 ## Tests
 
