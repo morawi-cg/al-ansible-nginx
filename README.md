@@ -144,9 +144,10 @@ The vagrant part is not related or connected to Ansible components, ansible simp
 
 ansible-galaxy is used to create the 'Roles' it will create an empty structure of folders, these need to be filled, depending on how one wants to built the roles. The site.yml will be the central point to call the needed Roles. 
 ## Documentation
+There are excellent documentation on individual technologies involved. Leave me a note if more is needed.
 ## Tests
+Its recommended to test units individually. Then combine in a larged structure.
 
-- Going into more detail on code and technologies used
 
 ---
 
@@ -175,7 +176,7 @@ If you wish to manipulate the code please post to your own repo and change there
 
 ## FAQ
 
-- **How do I do *specifically* so and so?**
+
     - No problem! Leave me a comment and I will try to update as soon as possible.
 
 ---
