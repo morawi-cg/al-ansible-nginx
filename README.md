@@ -129,7 +129,7 @@ $ yum -y install rh-python36-numpy  rh-python36-scipy rh-python36-python-tools r
 ---
 
 ## Features
-Ansible is key, one must understand how it works, it is comprised of objects caller Roles, they are comprised of smaller objects called tasks, they are comprised of modules, those are likely to be Python modules that interact with the operating system the automation tool will by operating upon.
+Ansible is key, one must understand how it works, it is comprised of objects caller Roles, they are comprised of smaller objects called tasks, which are comprised of modules, those are likely to be Python modules that interact with the operating system the automation tool will by operating upon.
 
 <a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/Ansible-Objects-Relations.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a>
 
@@ -160,7 +160,11 @@ An example of the usage of the 'ansible-galaxy' is the code below. This was of a
 There are excellent documentation on individual technologies involved. Leave me a note if more is needed.
 ## Tests
 Its recommended to test units individually. Then combine in a larged structure.
+## Hosts file
+During the testing I try to cause less disruption to the main environment. One of the most resommended measures is to keep the repo encapsulated separately with all its required dependencies in. 
 
+Using add hock commands makes it very simple to test small components. I recommended doing so, its also good for learning more about components you don't necessarily now well. Don't pollute the main ansible setup but point it to your enclosed experiment repository, via the '-i' key for inventory so one can test the repo separately before approving it. 
+one of the major sticky points was the 'hosts' files. The contain system-descriptive details of the environment to which the 
 
 ---
 
