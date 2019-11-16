@@ -182,8 +182,8 @@ Its important to ensure that there is full communication with the instances you 
 ## C - Ad-hock commands
 
 A good way of testing the communication with the instances, also from time to time testing components of the deployment that migh be sending errors or generally validating code output.
-Example below :
-<a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/ansible_ad_hock_commands.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a> 
+Example below 
+<a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/ansible_ad_hock_commands.jpeg?v=3&s=200" title="ad-hock-commands" alt="Ansible Add hock commands"></a> 
 ---
 
 ## Contributing
