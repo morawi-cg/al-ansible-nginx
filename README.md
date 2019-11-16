@@ -46,6 +46,7 @@
 - [Features](#features)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Documentation](#documentation)
 
 
 
