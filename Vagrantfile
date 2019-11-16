@@ -30,6 +30,8 @@ Vagrant.configure("2") do |config|
  config.vm.provision "shell", inline: <<-SHELL   
   sudo apt-get -y update
   sudo apt-get -y install gcc make
+  sudo apt-get -y install python-pip 
+  sudo apt-get -y install python3-pip
   sudo apt-add-repository ppa:ansible/ansible
   sudo apt-get -y install ansible
   sudo apt-get -y install python-apt
