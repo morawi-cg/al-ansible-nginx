@@ -196,7 +196,7 @@ ansible -i ansible_code/hosts --extra-vars "ansible_become_user=vagrant ansible_
 Try more options, as an advice, for example manipulate files and access root folder, to ensure that the privileged access is fully working
 
 ```
-ansible -i ansible_code/hosts --extra-vars "ansible_become_user=vagrant ansible_become_pass=vagrant" webservers -m  shell -a "ls -la  /root"
+ansible -i ansible_code/hosts --extra-vars "ansible_become_user=vagrant ansible_become_pass=vagrant" webservers -m  shell -a "rm -f /var/log/vbox-setup.log.1"
 
 ```
 ---
