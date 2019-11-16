@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
   sudo apt-get -y install gcc make
   sudo apt-add-repository ppa:ansible/ansible
   sudo apt-get -y install ansible
+  sudo apt-get -y install python-apt
   sudo apt-get -y install  apt-transport-https ca-certificates curl software-properties-common
   sudo echo "10.0.0.13       loadbalancer01.al.local" >> /etc/hosts
   sudo echo "10.0.0.14       webserver01.al.local"  >> /etc/hosts
