@@ -47,6 +47,7 @@
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Documentation](#documentation)
+- [Testing](#tests)
 
 
 
