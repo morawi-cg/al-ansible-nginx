@@ -1,6 +1,3 @@
-[webservers]
-webserver01.al.local ansible_host=10.0.0.14 ansible_connection=local ansible_user=vagrant ansible_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
-webserver02.al.local ansible_host=10.0.0.15  ansible_connection=local ansible_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
-
-[loadbalancers]
-loadbalancer01.al.local ansible_host=10.0.0.13 ansible_connection=local ansible_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+webserver01.al.local ansible_ssh_host=10.0.0.14 ansible_connection=ssh ansible_user=vagrant ansible_pass=vagrant ansible_ssh_private_key_file=.vagrant/machines/webserver01.al.local/virtualbox/private_key ansible_become=yes ansible_become_user=root
+webserver02.al.local ansible_ssh_host=10.0.0.15 ansible_connection=ssh ansible_user=vagrant ansible_pass=vagrant ansible_ssh_private_key_file=.vagrant/machines/webserver02.al.local/virtualbox/private_key ansible_become=yes ansible_become_user=root
+loadbalancer.al.local ansible_ssh_host=10.0.0.13 ansible_connection=ssh ansible_user=vagrant ansible_pass=vagrant ansible_ssh_private_key_file=.vagrant/machines/loadbalancer.al.local/virtualbox/private_key ansible_become=yes ansible_become_user=root
