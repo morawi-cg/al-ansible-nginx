@@ -184,6 +184,14 @@ A good way of testing the communication with the instances, also from time to ti
 Example below
 
 <a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/ansible_ad_hock_commands.jpeg?v=3&s=200" title="ad-hock-commands" alt="Ansible Add hock commands"></a> 
+
+## Expand access rights with the become command/key
+One must be a privileged user on the host that is hosting the vagrant boxes. The command below is example
+
+```
+ansible -i ansible_code/hosts --extra-vars "ansible_become_user=vagrant ansible_become_pass=vagrant" webservers -m  shell -a "ls -la  /root"
+
+```
 ---
 
 ## Contributing
