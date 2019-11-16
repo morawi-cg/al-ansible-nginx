@@ -181,7 +181,8 @@ NOTE: "ansible_connection=local" is key to element to make note of, for this fil
 Its important to ensure that there is full communication with the instances you have created. This will determine the success of the automation tasks. On a vagrant setup like this one authentication used by the communication will rely on "user_name, Password". This would be acceptable for testing purposes, this should not be the case for production or commercial deployments. Security is key thus its prudent to use tools such as "Ansible_Vault", "shared_keys"/renewable through a security policy, two factor authentication for general system access. There are more to list but for the purpose of this publication this should act as a serious note.
 ## C - Ad-hock commands
 A good way of testing the communication with the instances, also from time to time testing components of the deployment that migh be sending errors or generally validating code output.
-Example below 
+Example below
+
 <a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/ansible_ad_hock_commands.jpeg?v=3&s=200" title="ad-hock-commands" alt="Ansible Add hock commands"></a> 
 ---
 
