@@ -42,8 +42,12 @@
 > The `README` has a lot of info, thus section headers might be nice to focuse on what the reader needs in specific.
 
 - [Installation](#installation)
+- [Setup](#setup)
 - [Features](#features)
+- [Usage](#usage)
 - [Contributing](#contributing)
+
+
 
 
 
