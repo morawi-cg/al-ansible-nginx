@@ -164,7 +164,18 @@ Its recommended to test units individually. Then combine in a larged structure.
 During the testing I try to cause less disruption to the main environment. One of the most resommended measures is to keep the repo encapsulated separately with all its required dependencies in. 
 
 Using add hock commands makes it very simple to test small components. I recommended doing so, its also good for learning more about components you don't necessarily now well. Don't pollute the main ansible setup but point it to your enclosed experiment repository, via the '-i' key for inventory so one can test the repo separately before approving it. 
-one of the major sticky points was the 'hosts' files. The contain system-descriptive details of the environment to which the 
+one of the major sticky points was the 'hosts' files. The file contain system-descriptive details of the environment's hosts This file is like a dns and auth combined, for it to work it needs to follow the format below
+
+```
+[webservers]
+webserver01.al.local ansible_host=10.0.0.14 ansible_connection=local ansible_user=vagrant ansible_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+webserver02.al.local ansible_host=10.0.0.15  ansible_connection=local ansible_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+
+[loadbalancers]
+loadbalancer01.al.local ansible_host=10.0.0.13 ansible_connection=local ansible_user=vagrant ansible_ssh_pass=vagrant ansible_ssh_extra_args='-o StrictHostKeyChecking=no'
+
+```
+NOTE: "ansible_connection=local" is key to element to make note of, for this file to succeed  
 
 ---
 
