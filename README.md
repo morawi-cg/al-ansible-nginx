@@ -155,11 +155,11 @@ An example of the usage of the 'ansible-galaxy' is the code below. This was of a
 ```
 [root@localhost ansible]# ansible-galaxy init al-webcluster
 - al-webcluster was created successfully
-[root@localhost al-webcluster]# ansible-galaxy init al-loadbalancer
+[root@localhost al-webcluster]# ansible-galaxy init role-al-loadbalancer
 - al-loadbalancer was created successfully
-[root@localhost al-webcluster]# ansible-galaxy init al-webserver01
+[root@localhost al-webcluster]# ansible-galaxy init role-al-webserver01
 - al-webserver01 was created successfully
-[root@localhost al-webcluster]# ansible-galaxy init al-webserver02
+[root@localhost al-webcluster]# ansible-galaxy init role-al-webserver02
 - al-webserver02 was created successfully
 ```
 
