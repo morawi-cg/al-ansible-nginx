@@ -162,6 +162,12 @@ An example of the usage of the 'ansible-galaxy' is the code below. This was of a
 [root@localhost al-webcluster]# ansible-galaxy init al-webserver02
 - al-webserver02 was created successfully
 ```
+
+Using Ansible-Galaxy is the new way, Puppet another similar tool uses PDK, if you ever used it this concept is fairly similar to that of Pupper-PDK. ansible galaxy will create the structure that you can then fill in with the needed/required files, (don't need to populate every folder if you don't require it).
+Below is a diagram that could help explain the structure a bit better:
+
+<a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/Roles_structure.jpeg?v=3&s=200" title="Ansible_Structures" alt="Repository_Roles_Structure"></a>
+
 ## Documentation
 There are excellent documentation on individual technologies involved. Leave me a note if more is needed.
 ## Tests
