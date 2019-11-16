@@ -153,7 +153,7 @@ ansible-galaxy is used to create the 'Roles' it will create an empty structure o
 An example of the usage of the 'ansible-galaxy' is the code below. This was of automating the creation of a structure that represent an object has also been replicated on other automation tools such as Pupet. 
 
 ```
-[root@localhost ansible]# ansible-galaxy init al-webcluster
+[root@localhost ansible]# ansible-galaxy init role-al-webcluster
 - al-webcluster was created successfully
 [root@localhost al-webcluster]# ansible-galaxy init role-al-loadbalancer
 - al-loadbalancer was created successfully
