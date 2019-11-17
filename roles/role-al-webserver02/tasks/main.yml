@@ -17,4 +17,9 @@
     owner: root
     group: root
     mode: u=rwx,g=r,o=r 
-    notify: restart nginx
+
+- name: restart nginx
+  service: 
+    name: nginx
+    state: restarted 
+    enabled: yes
