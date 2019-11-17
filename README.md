@@ -150,7 +150,12 @@ The vagrant part is not related or connected to Ansible components, ansible simp
 
 ansible-galaxy is used to create the 'Roles' it will create an empty structure of folders, these need to be filled, depending on how one wants to built the roles. The site.yml will be the central point to call the needed Roles. 
 
-An example of the usage of the 'ansible-galaxy' is the code below. This was of automating the creation of a structure that represent an object has also been replicated on other automation tools such as Pupet. 
+An example of the usage of the 'ansible-galaxy' is the code below. This was of automating the creation of a structure that represent an object has also been replicated on other automation tools such as Puppet.
+
+There are folders that are used for reference only, in the evolutionary process of creating this code they where stepping stones and an early idea of a simpler strucrture. These folders are 'ansible_code' and 'templates', 'DS_Store' is a product of updating some Python components. The server the code was built was running Linux Fedora 30 64 bit, the vagrant machines are Ubuntu/Debian 18.04 64 bit.
+
+
+
 
 ```
 [root@localhost ansible]# ansible-galaxy init role-al-webcluster
