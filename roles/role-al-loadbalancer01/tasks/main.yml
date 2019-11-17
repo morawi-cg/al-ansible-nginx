@@ -11,16 +11,28 @@
     state: latest
     update_cache: yes
    
-- name: Copy Nginx config file 
+- name: Copy Load balancer Nginx config file 
   copy:
     src: files/lb_nginx.conf
     dest: /etc/nginx/conf.d/lb_nginx.conf
     owner: root
     group: root 
     mode: u=rwx,g=r,o=r
-   
+
+- name: Copy Main modified Nginx config file 
+  copy:
+    src: files/nginx.conf
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root 
+    mode: u=rwx,g=r,o=r
+
+- name: Remove symlink (delete file)
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+
 - name: start nginx
   service:
     name: nginx
-    state: started    
-      
+    state: started
