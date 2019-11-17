@@ -144,6 +144,29 @@ Nginx is a very powerful webserver, aims at performance, its very sophisticated.
 <a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/Load_balance_Options.jpeg?v=3&s=200" title="Main_Structure" alt="Main_Structure_LB_Webservers"></a>
 
 ## Usage
+
+Access to vagrant boxes via ssh is best serverd from within the folder/repo-folder that they where initiated from. This is to keep matters simple, so that one will not need to start copying keys accross and deal with more complex authenticaiton issues. The ".vagrant" folder is where the "private" key is used to authenticate the access to the vagrant boxes.
+
+```
+drwxr-xr-x 8 root root  4096 Nov 17 02:33 .
+drwxr-xr-x 7 root root  4096 Nov 16 14:59 ..
+drwxr-xr-x 2 root root  4096 Nov 17 01:00 ansible_code
+-rw-r--r-- 1 root root  6148 Nov 14 12:06 .DS_Store
+drwxr-xr-x 8 root root  4096 Nov 14 12:06 .git
+-rw-r--r-- 1 root root    12 Nov 14 12:06 .gitignore
+-rw-r--r-- 1 root root   782 Nov 17 02:26 hosts
+-rw-r--r-- 1 root root   537 Nov 16 20:47 oldhosts
+drwxr-xr-x 2 root root  4096 Nov 14 12:06 readme_images
+-rw-r--r-- 1 root root  5771 Nov 14 12:06 README.md
+drwxr-xr-x 5 root root  4096 Nov 17 02:27 roles
+-rw-r--r-- 1 root root   453 Nov 17 02:33 site.yml
+drwxr-xr-x 2 root root  4096 Nov 17 00:13 templates
+-rw-r--r-- 1 root root 12288 Nov 14 13:30 .test.swp
+drwxr-xr-x 4 root root  4096 Nov 14 14:04 .vagrant
+-rw-r--r-- 1 root root  1477 Nov 14 16:13 Vagrantfile
+
+```
+
 Activate the vagrant file, change directory to the repository, the file is called Vagrantfile, as long as your Computer's operating system can run Python, Ansible, VirtualBox and Vagrant), then you should be able to just run 'vagrant up'. This will generate the virtual machine(s),dependind on what has been specified. These type of machines are specially adapted to Vagrant. Packer can be used to transform them to images that can be used on cloud providers, this is why one can use this process as testing grounds. 
 
 The vagrant part is not related or connected to Ansible components, ansible simply has roles, each role is assigned to a virtual machine, the idea its simpler to have roles independent per machine, this was a change will not need to be too impacting.
