@@ -40,6 +40,7 @@ Vagrant.configure("2") do |config|
   sudo echo "10.0.0.13       loadbalancer01.al.local" >> /etc/hosts
   sudo echo "10.0.0.14       webserver01.al.local"  >> /etc/hosts
   sudo echo "10.0.0.15       webserver02.al.local"  >> /etc/hosts
+  sudo echo " vagrant ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
  SHELL
  config.vm.provider :virtualbox do |vb|
  vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
