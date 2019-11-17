@@ -314,6 +314,12 @@ http {
 
 
 ```
+
+A final point about the loadbalancer, one must remember to do this:
+
+```
+sudo rm /etc/nginx/sites-enabled/default
+```
 ## Documentation
 There are excellent documentation on individual technologies involved. Leave me a note if more is needed.
 ## Tests
