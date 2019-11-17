@@ -145,6 +145,9 @@ Nginx is a very powerful webserver, aims at performance, its very sophisticated.
 
 ## Usage
 
+To start the process after cloning this repository, cd into it, then activate 'vagrant up' this should start the building of the vagrant boxes. Once done use 'ansible-galaxy -i hosts site.yml' This should install all needed components and get the system up and running.
+
+
 Access to vagrant boxes via ssh is best serverd from within the folder/repo-folder that they where initiated from. This is to keep matters simple, so that one will not need to start copying keys accross and deal with more complex authenticaiton issues. The ".vagrant" folder is where the "private" key is used to authenticate the access to the vagrant boxes.
 
 ```
