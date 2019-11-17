@@ -1,5 +1,5 @@
 # This playbook deploys the whole application stack in this site.
-
+# one can be a bit more explicit and define server by server 
 
 - name: apply nginx configuration to two webserver nodes
   hosts: webservers
