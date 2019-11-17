@@ -1,0 +1,19 @@
+# the website that will be enabled is this looks_one
+###   al.local   ##
+server {
+    listen 80;
+    listen [::]:80;
+
+    root /var/www/al.local/index.html;
+
+    index index.html;
+
+    server_name al.local www.al.local;
+
+     access_log /var/log/nginx/al.local.access.log;
+     error_log /var/log/nginx/al.local.error.log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

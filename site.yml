@@ -1,0 +1,31 @@
+---
+
+- hosts: webserver01.al.local
+  remote_user: vagrant
+  become: yes
+  become_user: root 
+  become_method: sudo
+  roles: 
+    - role-al-webserver01
+
+
+- hosts: webserver02.al.local
+  remote_user: vagrant
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - role-al-webserver02
+
+
+- hosts: loadbalancer01.al.local
+  remote_user: vagrant
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - role-al-loadbalancer01
+
+
+
+

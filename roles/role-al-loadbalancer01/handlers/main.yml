@@ -1,0 +1,9 @@
+---
+# handlers file for role-al-loadbalancer
+
+- name: nginx restart
+  service: >
+    name=nginx
+    state=restarted
+
+

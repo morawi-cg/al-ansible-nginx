@@ -1,0 +1,7 @@
+---
+# handlers file for role-al-webserver01
+
+- name: nginx restart
+  service: >
+    name=nginx
+    state=restarted 
