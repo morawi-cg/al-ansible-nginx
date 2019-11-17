@@ -1,5 +1,4 @@
 ---
-
 - name: Update repository and Upgrade packages
   apt:
     upgrade: dist
@@ -11,40 +10,11 @@
     state: latest
     update_cache: yes
 
-- name: Creates directory this project site config directory al
-  file:
-    path: /etc/nginx/sites-available/al.local 
-    state: directory
-    owner: root
-    group: root
-    mode: u=rwx,g=r,o=r
-
-- name: Creates directory this project site web_www directory al.local directory
-  file:
-    path: /var/www/al.local 
-    state: directory
-    owner: root
-    group: root
-    mode: u=rwx,g=r,o=r
-
-- name: Copy Nginx config file 
-  template:
-    src: files/al.local
-    dest: /etc/nginx/sites-available/al.local/al.local
-    owner: root
-    group: root
-    mode: u=rwx,g=r,o=r
-
-- name: Create symlink
-  file: 
-    src: /etc/nginx/sites-available/al.local 
-    dest: /etc/nginx/sites-enabled/al.local 
-    state: link
-
 - name: Copy holding page for Nginx Specific
   template:
     src: templates/webserver02.al.local.html
-    dest: /var/www/al.local/index.html
+    dest: /var/www/html/index.nginx-debian.html
     owner: root
     group: root
     mode: u=rwx,g=r,o=r 
+    notify: restart nginx
