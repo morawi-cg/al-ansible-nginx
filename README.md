@@ -196,6 +196,121 @@ Below is a diagram that could help explain the structure a bit better:
 
 <a href="https://github.com/morawi-cg/al-ansible-nginx.git"><img src="readme_images/Roles_structure.jpeg?v=3&s=200" title="Ansible_Structures" alt="Repository_Roles_Structure"></a>
 
+## Load balancer
+Upon tryinf to read about how to turn the opensouce nginx into an http loadbalancer is was preceived to be easy, the location of where this file was is to be dropped was a bit of a confusion point, the conclusion was after testing '/etc/nginx/conf.d/'. The file 'lb_nginx.conf' has a small picularity that needs to be highlighted
+```
+#http {
+    upstream backend {
+        least_conn;
+        server webserver01.al.local:80;
+        server webserver02.al.local:80;
+
+    }
+
+    server {
+        listen 80;
+        #server_name al.local;
+        location / {
+            proxy_pass http://backend;
+        }
+    }
+#}
+```
+Most documentaion neglect the fact that is should never conflict with the main nginx config file, based in '/etc/nginx/nginx.conf' . Hence you see the #http stubs commented out, the error that was picked up by nginx logs or 'journalctl -xe' wasn't descriptive engough. so arrived it conclusion by logic.
+
+This is how the main file '/etc/nginx/nginx.conf' would need to look like:
+
+```
+user www-data;
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+        worker_connections 768;
+        # multi_accept on;
+}
+
+http {
+#
+#       ##
+#       # Basic Settings
+#       ##
+#
+#       sendfile on;
+#       tcp_nopush on;
+#       tcp_nodelay on;
+#       keepalive_timeout 65;
+#       types_hash_max_size 2048;
+#       # server_tokens off;
+#
+#       # server_names_hash_bucket_size 64;
+#       # server_name_in_redirect off;
+#
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+#
+#       ##
+#       # SSL Settings
+#       ##
+#
+#       ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
+#       ssl_prefer_server_ciphers on;
+#
+#       ##
+#       # Logging Settings
+#       ##
+#
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+#
+#       ##
+#       # Gzip Settings
+#       ##
+#
+        gzip on;
+#
+        # gzip_vary on;
+        # gzip_proxied any;
+        # gzip_comp_level 6;
+        # gzip_buffers 16 8k;
+        # gzip_http_version 1.1;
+        # gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+
+        ##
+        # Virtual Host Configs
+        ##
+
+        include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
+}
+
+
+#mail {
+#       # See sample authentication script at:
+#       # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+#
+#       # auth_http localhost/auth.php;
+#       # pop3_capabilities "TOP" "USER";
+#       # imap_capabilities "IMAP4rev1" "UIDPLUS";
+#
+#       server {
+#               listen     localhost:110;
+#               protocol   pop3;
+#               proxy      on;
+#       }
+#
+#       server {
+#               listen     localhost:143;
+#               protocol   imap;
+#               proxy      on;
+#       }
+#}
+                                                           85,2          Bot
+                                                           64,0-1        73%
+
+
+```
 ## Documentation
 There are excellent documentation on individual technologies involved. Leave me a note if more is needed.
 ## Tests
